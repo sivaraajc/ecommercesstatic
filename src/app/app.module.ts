@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { HomesComponent } from './homes/homes.component';
 import{BrowserAnimationsModule}from '@angular/platform-browser/animations';
 import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { TypeaheadModule } from 'ngx-bootstrap/typeahead';
     BrowserAnimationsModule,
     TypeaheadModule,
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
