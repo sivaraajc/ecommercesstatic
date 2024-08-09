@@ -14,7 +14,7 @@
         <span style="color: red; font-size: 18px;" *ngIf="orderForm.get('name')?.touched && orderForm.get('name')?.invalid">Name is required</span>
       </div>          
       <div class="form-group"> 
-        <label for="phone" style="color:black;">Phone Number</label>
+        <label for="phone" style="color:black;">Phone Numbers</label>
         <input type="number" id="phone" placeholder="Phone Number" formControlName="phoneno">
         <span style="color: red; font-size: 18px;" *ngIf="orderForm.get('phoneno')?.touched && orderForm.get('phoneno')?.invalid">Phone Number is required</span>
         <span style="color: red; font-size: 18px;" *ngIf="orderForm.get('phoneno')?.errors?.['pattern']">Please enter a 10-digit phone number</span>
